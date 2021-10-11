@@ -1,3 +1,3 @@
 # AdvancedArrayMethodsExercise
  
- Exercise from Springboard to practice Array Methods.
+ Exercises from Springboard to practice Array Methods.
