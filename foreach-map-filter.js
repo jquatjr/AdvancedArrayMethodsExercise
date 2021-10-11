@@ -41,8 +41,12 @@ Examples:
 
 */
 function showFirstAndLast(arr) {
-
-}
+    let newArray = [];
+    arr.forEach(function (value) {
+        newArray.push(value[0] + value[value.length - 1]);
+    });
+    return newArray;
+};
 
 /*
 Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns the array passed to the function with the new key and value added for each object 
@@ -54,7 +58,10 @@ Examples:
 
 */
 function addKeyAndValue(arr, key, value) {
-
+    arr.forEach(function (val) {
+        val[key] = value;
+    });
+    return arr;
 }
 
 /*
@@ -68,8 +75,22 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str) {
+    let splitArr = str.split("");
+    let object = {};
+    const vowels = 'aeiou';
 
-}
+    splitArr.forEach(function (letter) {
+        let lowerCasedLetter = letter.toLowerCase();
+        if (vowels.indexOf(lowerCasedLetter) !== -1) {
+            if (object[lowerCasedLetter]) {
+                object[lowerCasedLetter]++;
+            } else {
+                object[lowerCasedLetter] = 1;
+            }
+        }
+    });
+    return obj;
+};
 
 /*
 Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
